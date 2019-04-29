@@ -1,0 +1,27 @@
+footer{
+  background: #15141a;
+  margin-top: -15px;
+  .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    &__img{
+      a{
+        img{
+          margin-top: 10px;
+          margin-right: 10px;
+        }
+      }
+    }
+    p{
+      color: #444348;
+      font-family: "Source Sans Pro - Semibold";
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}
+
+
+
+
