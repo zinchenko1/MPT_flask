@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 <body>
     <section class="home">
@@ -27,16 +28,23 @@
                     </nav>
                 </header>
 
-                <div class="data">
-                    <div class="introducing">
-
+                <div class="home__block__data">
+                    <div class="home__block__data__introducing">
+                        <h3>Define your body mass index</h3>
+                        <h2>Carefully crafted and beautiful landing page.</h2>
+                        <p>Etiam ullamcorper et turpis eget hendrerit. Praesent 
+                            varius risus mi, at elementum magna ultricies accumsan. 
+                            Cras venenatis lacus sed dolor placerat tempus. Morbi 
+                            blandit at neque ut imperdiet.
+                        </p>
                     </div>
                     
                     <div class="form">
                         
                     </div>
                 </div>
-               
+                
+                <a href="#task" class="block_1-btn">ClICK HERE</a>
 
             </div>
         </div>        
@@ -46,17 +54,33 @@
 
     </section>
 
-    <footer>
+    <footer id="contacts">
         <div class="footer content">
             <p>Copyright © 2014 Misha Zinchenko</p>
             <div class="footer__img">
-                <a href="#"><img src="assets/img/behance.png" alt="Behance"></a>
-                <a href="#"><img src="assets/img/dribbble.png" alt="Dribbble"></a>
-                <a href="#"><img src="assets/img/twitter.png" alt="Twitter"></a>
-                <a href="#"><img src="assets/img/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="assets/img/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://www.behance.net/"><img src="assets/img/behance.png" alt="Behance"></a>
+                <a href="https://dribbble.com/"><img src="assets/img/dribbble.png" alt="Dribbble"></a>
+                <a href="https://twitter.com/?lang=uk"><img src="assets/img/twitter.png" alt="Twitter"></a>
+                <a href="https://www.facebook.com/"><img src="assets/img/facebook.png" alt="Facebook"></a>
+                <a href="https://www.linkedin.com/"><img src="assets/img/linkedin.png" alt="LinkedIn"></a>
             </div>
         </div>    
     </footer>
+
+    <script>
+        jQuery(function($){
+        $('a[href*="#"]').on('click.smoothscroll', function( e ){
+        var hash= this.hash, _hash   = hash.replace(/#/,''), theHref = $(this).attr('href').replace(/#.*/, '');
+        if( theHref && location.href.replace(/#.*/,'') != theHref ) return;
+        var $target = _hash === '' ? $('body') : $( hash + ', a[name="'+ _hash +'"]').first();
+        if( ! $target.length ) return;
+        e.preventDefault();
+        $('html, body').stop().animate({ scrollTop: $target.offset().top - 0 }, 1000, 'swing', function(){
+        window.location.hash = hash;
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
