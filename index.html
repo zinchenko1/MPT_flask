@@ -32,15 +32,24 @@
                     <div class="home__block__data__introducing">
                         <h3>Define your body mass index</h3>
                         <h2>Carefully crafted and beautiful landing page.</h2>
-                        <p>Etiam ullamcorper et turpis eget hendrerit. Praesent 
-                            varius risus mi, at elementum magna ultricies accumsan. 
-                            Cras venenatis lacus sed dolor placerat tempus. Morbi 
-                            blandit at neque ut imperdiet.
+                        <p>BMI categories are generally regarded as a satisfactory tool for measuring 
+                            whether sedentary individuals are underweight, overweight, or obese with 
+                            various exceptions, such as: athletes, children, the elderly, and the infirm. 
+                            Also, the growth of a child is documented against a BMI-measured growth chart.
                         </p>
                     </div>
                     
                     <div class="form">
-                        
+                        <p>Fill out the form</p>
+                        <form action="{{url_for('success')}}" method="POST">
+                            <input title="Your email will be safe with us" placeholder="Enter email" type="email" name="email_name" required>
+                            <input title="Your data will be safe with us" placeholder="Enter age" type="text" name="age_name" required>
+                            <input title="Your data will be safe with us" placeholder="Enter height" type="number" min="10", max="300" name="height_name" required>
+                            <input title="Your data will be safe with us" placeholder="Enter weight" type="number" min="1", max="200" name="weight_name" required>
+                            <button type="submit"> Submit </button>
+                        </form>
+    </div>
+
                     </div>
                 </div>
                 
