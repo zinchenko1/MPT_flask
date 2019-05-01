@@ -8,16 +8,45 @@ body{
       width: 1170px; 
     }
   }
-  a{text-decoration: none;}
-  li{list-style-type: none;}
-  h6{display: none;}
-  hr{border:none;}
+  a{
+    text-decoration: none;
+  }
+  li{
+    list-style-type: none;
+  }
+  h6{
+    display: none;
+  }
+  hr{
+    border:none;
+  }
 }
+
 
 * {
   outline: 0 !important;
 }
-
+// ------ ScrollBar -------
+::-webkit-scrollbar{
+  width:12px;
+}
+::-webkit-scrollbar-thumb{
+  border-width:1px 1px 1px 2px;
+  border-color: rgb(119, 119, 119);
+  background-color: #aaa;
+}
+::-webkit-scrollbar-thumb:hover{
+  border-width: 1px 1px 1px 2px;
+  border-color: #555;
+  background-color: #777;
+}
+::-webkit-scrollbar-track{
+  border-width:0;
+}
+::-webkit-scrollbar-track:hover{
+  border-left: solid 1px #aaa;
+  background-color: #eee;
+}
 
 @import "normalize/import-now";
 

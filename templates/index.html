@@ -1,5 +1,5 @@
-<DOCTYPE! html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zxx">
 <head>
     <meta charset="UTF-8">
     <title>Define your body mass index</title>
@@ -8,9 +8,12 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="/static/js/main.js"></script>
 </head>
 <body>
     <section class="home">
+        <h6>/</h6>
         <div class="home__block">
             <div class="content">
                 <header>
@@ -37,6 +40,8 @@
                             various exceptions, such as: athletes, children, the elderly, and the infirm. 
                             Also, the growth of a child is documented against a BMI-measured growth chart.
                         </p>
+                        <a href="#task" class="block_1-btn">Click here</a>
+                        <a href="#task" class="block_1-btn">Click here</a>
                     </div>
                     
                     <div class="form">
@@ -44,22 +49,33 @@
                         <form action="{{url_for('success')}}" method="POST">
                             <input title="Your email will be safe with us" placeholder="Enter email" type="email" name="email_name" required>
                             <input title="Your data will be safe with us" placeholder="Enter name" type="text" name="name_name" required>
-                            <input title="Your data will be safe with us" placeholder="Enter age" type="number" min="1", max="200" name="age_name" required>
-                            <input title="Your data will be safe with us" placeholder="Enter height" type="number" min="50", max="300" name="height_name" required>
-                            <input title="Your data will be safe with us" placeholder="Enter weight" type="number" min="1", max="200" name="weight_name" required>
-                            <button type="submit">Submit</button>
+                            <input title="Your data will be safe with us" placeholder="Enter age" type="number" min="1" max="200" name="age_name" required>
+                            <input title="Your data will be safe with us" placeholder="Enter height" type="number" min="50" max="300" name="height_name" required>
+                            <input title="Your data will be safe with us" placeholder="Enter weight" type="number" min="1" max="200" name="weight_name" required>
+                            <button type="submit"><span>Submit</span></button>
                         </form>
                     </div>
 
                 </div>
             </div>
                 
-            <a href="#task" class="block_1-btn">ClICK HERE</a>
+            
 
         </div>      
     </section>
 
-    <section id="task"></section>
+    <section class="task" id="task">
+        <h6>/</h6>
+        <div class="content">
+            <div class="task__block">
+                <div class="task__block__item"></div>
+                <div class="task__block__item"></div>
+                <div class="task__block__item"></div>
+                <div class="task__block__item"></div>
+                <div class="task__block__item"></div>
+            </div>
+        </div>
+    </section>
 
     <footer id="contacts">
         <div class="footer content">
@@ -74,7 +90,7 @@
         </div>    
     </footer>
 
-    <script>
+    <!-- <script>
         jQuery(function($){
         $('a[href*="#"]').on('click.smoothscroll', function( e ){
         var hash= this.hash, _hash   = hash.replace(/#/,''), theHref = $(this).attr('href').replace(/#.*/, '');
@@ -87,7 +103,8 @@
                 });
             });
         });
-    </script>
+    </script> -->
+
 
 </body>
 </html>
