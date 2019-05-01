@@ -23,7 +23,7 @@ gulp.task('styles', function () {
     .pipe(sourcemaps.init())
     .pipe(scss({outputStyle: 'compressed', includePaths: SASS_INCLUDE_PATHS}))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./assets/css'))
+    .pipe(gulp.dest('./static/css'))
 })
 
 gulp.task('js', function () {
@@ -33,13 +33,13 @@ gulp.task('js', function () {
     .pipe(babel({compact: true}))
     .pipe(concat('main.js'))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./assets/js'))
+    .pipe(gulp.dest('./static/js'))
 })
 
 gulp.task('images', function () {
   return gulp.src('./src/img/**/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('./assets/img'))
+    .pipe(gulp.dest('./static/img'))
 })
 
 gulp.task('watch', ['styles', 'js'], function () {

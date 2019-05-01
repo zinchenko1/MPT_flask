@@ -1,5 +1,5 @@
 .home{
-  background: url(/assets/img/bg_home_2.png) center center ;
+  background: url(/static/img/bg_home_2.png) center center ;
   background-size: cover;
   height: 640px;
   &__block{
@@ -78,7 +78,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin-bottom: 30px;
+      margin-bottom: -1000px;
       padding-top: 60px;
       padding-right: 150px;
       &__introducing{
@@ -113,7 +113,7 @@
         background: rgba(100%, 100%, 100%, 0.4);
         border-radius: 10px;
         p{
-          color: #ffeb3b;
+          color: #fbe200;
           font-family: "Source Sans Pro - Semibold";
           font-size: 28px;
           font-weight: 600;
@@ -123,17 +123,17 @@
           display: flex;
           flex-direction: column;
           input{
-            color: #ffeb3b;
             padding-left: 10px;
             margin-top: 15px;
             height: 40px;
             border-radius: 20px;
-            border: 2px solid silver;
+            border: 2px solid rgb(133, 131, 131);
           }
           button{
             height: 40px;
             margin-top: 30px;
             width: 50%;
+            border-radius: 20px;
           }
         }
       }  
@@ -141,12 +141,11 @@
   }
 }
 
-
 .block_1-btn{
   padding: 15px 26px;
   border: 2px solid #ffeb3b;
   font-family: "Source Sans Pro";
-  border-radius: 50px;
+  border-radius: 20px;
   color: #ffffff;
   margin-left: 43%;
   @media screen and (min-width: 1100px){
