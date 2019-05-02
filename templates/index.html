@@ -10,6 +10,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="/static/js/main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 <body>
     <section class="home">
@@ -40,27 +43,29 @@
                             various exceptions, such as: athletes, children, the elderly, and the infirm. 
                             Also, the growth of a child is documented against a BMI-measured growth chart.
                         </p>
-                        <a href="#task" class="block_1-btn">Click here</a>
-                        <a href="#task" class="block_1-btn">Click here</a>
+                        <a href="#task" class="block_1-btn" style="text-decoration: none;">Click here</a>
+                        <a href="#task" class="block_1-btn" style="text-decoration: none;">Click here</a>
                     </div>
                     
-                    <div class="form">
+                    <div class="form" id="form">
                         <p>Fill out the form</p>
-                        <form action="{{url_for('success')}}" method="POST">
-                            <input title="Your email will be safe with us" placeholder="Enter email" type="email" name="email_name" required>
-                            <input title="Your data will be safe with us" placeholder="Enter name" type="text" name="name_name" required>
-                            <input title="Your data will be safe with us" placeholder="Enter age" type="number" min="1" max="200" name="age_name" required>
-                            <input title="Your data will be safe with us" placeholder="Enter height" type="number" min="50" max="300" name="height_name" required>
-                            <input title="Your data will be safe with us" placeholder="Enter weight" type="number" min="1" max="200" name="weight_name" required>
-                            <button type="submit"><span>Submit</span></button>
+                        <form action="" method="POST">
+                            <input id="email" placeholder="Enter email" type="email" name="email_name" required>
+                            <input id="name" placeholder="Enter name" type="text" name="name_name" required>
+                            <input id="age" placeholder="Enter age" type="number" min="1" max="200" name="age_name" required>
+                            <input id="height" placeholder="Enter height" type="number" min="50" max="300" name="height_name" required>
+                            <input id="weight" placeholder="Enter weight" type="number" min="1" max="200" name="weight_name" required>
+                            <button id="btn_form" type="submit">Submit</button>
                         </form>
+                        
                     </div>
+                    
+                    <div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
+	                <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
 
                 </div>
             </div>
                 
-            
-
         </div>      
     </section>
 
