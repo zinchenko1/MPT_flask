@@ -18,8 +18,8 @@ def process():
         y = int(weight)
         x = int(height)
         z = y/(x*x/10000)
-        newName = round(z,1)
-        return jsonify({'name' : newName})
+        new = round(z,1)
+        return jsonify({'name' : new})
 
     return jsonify({'error' : 'Missing data!'})
 

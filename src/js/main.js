@@ -22,7 +22,6 @@ $(document).ready(function() {
         weight : $('#weight').val()
 			},
       type : 'POST',
-      timeout: 3000,
 			url : '/app'
 		})
 		.done(function(data) {
@@ -44,17 +43,3 @@ $(document).ready(function() {
 		event.preventDefault();
 	});
 });
-
-// $("button").on("click", function(){
-//   setTimeout(openPopup, 2000);
-//   $(this).prop("disabled", true);
-// // });
-
-// $(function() {
-//   $(".form").fadeIn("slow");
-//   $('#successAlert').css("display", "none");
-// }, 2000);
-
-
-
-
