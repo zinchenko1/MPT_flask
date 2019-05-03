@@ -13,8 +13,7 @@ jQuery(function($){
 
 $(document).ready(function() {
 	$('form').on('submit', function(event) {
-    
-    $.ajax({
+		$.ajax({
 			data : {
 				name : $('#email').val(),
         email : $('#name').val(),
@@ -23,9 +22,9 @@ $(document).ready(function() {
         weight : $('#weight').val()
 			},
       type : 'POST',
+      timeout: 3000,
 			url : '/app'
-    })
-    
+		})
 		.done(function(data) {
 			if (data.error) {
 				$('#errorAlert').text(data.error).show();
@@ -37,14 +36,25 @@ $(document).ready(function() {
         $('#errorAlert').hide();
 			}
     });
-
     setTimeout(function() {
       $("#form_reset").trigger('reset');
       $("#form").fadeIn("slow");
       $('#successAlert').css("display", "none");
     }, (4444));
-
 		event.preventDefault();
-  
-  });
+	});
 });
+
+// $("button").on("click", function(){
+//   setTimeout(openPopup, 2000);
+//   $(this).prop("disabled", true);
+// // });
+
+// $(function() {
+//   $(".form").fadeIn("slow");
+//   $('#successAlert').css("display", "none");
+// }, 2000);
+
+
+
+
